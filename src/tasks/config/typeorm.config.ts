@@ -9,7 +9,7 @@ export function typeOrmConfig(): TypeOrmModuleOptions {
     username: ACCESSES.DB.USERNAME,
     password: ACCESSES.DB.PASSWORD,
     database: ACCESSES.DB.DB_NAME,
-    entities: [__dirname + '/../**/*.entity.ts'],
+    entities: [__dirname + '/../**/*.entity.{js,ts}'],
     synchronize: true
   }
 }

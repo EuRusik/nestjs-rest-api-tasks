@@ -1,4 +1,4 @@
-import { TaskStatus } from '../tasks.model';
+import { TaskStatus } from '../models/tasks.model';
 import { IsIn, IsNotEmpty, IsOptional } from 'class-validator';
 import { AllowedStatuses } from '../consts/allowed-statuses.const';
 

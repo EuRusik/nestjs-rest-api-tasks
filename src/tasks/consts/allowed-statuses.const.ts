@@ -1,4 +1,4 @@
-import { TaskStatus } from '../tasks.model';
+import { TaskStatus } from '../models/tasks.model';
 
 export function AllowedStatuses(): (TaskStatus)[] {
   return [
