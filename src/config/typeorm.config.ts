@@ -1,5 +1,5 @@
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
-import { ACCESSES } from '../../../accesses.config';
+import { ACCESSES } from '../../accesses.config';
 
 export function typeOrmConfig(): TypeOrmModuleOptions {
   return {
