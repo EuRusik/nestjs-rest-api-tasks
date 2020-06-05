@@ -7,7 +7,7 @@ import { UserEntity } from '../../entities/user.entity';
 @EntityRepository(UserEntity)
 export class UserRepository extends Repository<UserEntity>{
 
-  async hasPassword(password: string, salt: string): Promise<string> {
+  async hashPassword(password: string, salt: string): Promise<string> {
     return bcrypt.hash(password, salt);
   }
 
@@ -28,7 +28,7 @@ export class UserRepository extends Repository<UserEntity>{
     const user = new UserEntity();
     user.username = username;
     user.salt = await this.genSalt();
-    user.password = await this.hasPassword(password, user.salt);
+    user.password = await this.hashPassword(password, user.salt);
     try {
       await user.save(); 
     } catch (e) {
