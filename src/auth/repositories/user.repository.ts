@@ -32,7 +32,6 @@ export class UserRepository extends Repository<UserEntity>{
     try {
       await user.save(); 
     } catch (e) {
-      console.log(e);
       if (e.code === 'ER_DUP_ENTRY') {
         throw new ConflictException('Username already dy exist!')
       } throw new InternalServerErrorException();
